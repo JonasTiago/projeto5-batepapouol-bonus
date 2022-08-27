@@ -13,7 +13,7 @@ body{
 .batepapo {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between; 
 }
 
@@ -21,7 +21,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 85px;
     background-color: #ffffff;
     position: fixed;
@@ -44,7 +44,7 @@ header > img{
 main {
     margin-top: 100px;
     margin-bottom: 100px;
-    width: 100%;
+    width: 100vw;
     max-width: 370px;
 }
 
@@ -53,10 +53,11 @@ main > div {
     padding: 15px 5px;
     font-size: 14px;
     margin: 5px 0;
+    width: 100vw;
 }
 
 main > div > span{
-    width: 100%;
+    width: 100vw;
     word-wrap: break-word;
 }
 
@@ -86,7 +87,7 @@ main > div > span span {
 
 .enviar {
     background-color: #fff;
-    width: 100%;
+    width: 100vw;
     height: 85px;
     display: flex;
     justify-content: space-between;
