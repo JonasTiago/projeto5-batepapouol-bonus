@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bate Papo Uol</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="batepapo">
+        <header>
+            <img src="img/logo 1.png" alt="logo batepapo">
+            <ion-icon name="people" onclick="abriBar()"></ion-icon>
+        </header>
+        <div class="sidebar invisivel">
+            <div>
+                <h3>Escolha um contato
+                    para enviar mensagem:</h3>
+            </div>
+            <div class="usuariosAtivos">
+
+            </div>
+            <div>
+                <h3>Escolha a visibilidade:</h3>
+            </div>
+            <div>
+                <span>
+                    <ion-icon name="lock-open"></ion-icon>
+                    <p data-identifier="visibility">Público</p>
+                    <ion-icon id="publico" name="chevron-down-outline" class="escolha escolhafinal"></ion-icon>
+                </span>
+                <span>
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <p data-identifier="visibility">Reservadamente</p>
+                    <ion-icon id="reservado" name="chevron-down-outline" class="escolha"></ion-icon>
+                </span>
+            </div>
+        </div>
+        <main class="todasMensagens" onclick="fechaBar()">
+        </main>
+        <div class="enviar" onclick="fechaBar()">
+            <div>
+                <input type="text" class="messagem" placeholder="Escreva aqui..." autofocus>
+                <span>Enviando para <span>Todos</span> (<span>Público</span>)</span>
+            </div>
+            <ion-icon name="paper-plane-outline" onclick="enviarNewMsg()"></ion-icon>
+        </div>
+    </div>
+    <div class="login invisivel">
+        <img src="img/logo 2.png" alt="logo batepapo">
+        <div> 
+            <input type="text" placeholder="Digite seu nome" value="">
+            <button onclick="nomeUser()">Entrar</button> 
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
