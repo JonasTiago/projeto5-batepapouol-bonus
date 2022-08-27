@@ -23,6 +23,7 @@ function nomeUser() {
     }else{
         alert('Seu nome não pode ser em branco')
     }
+
     setInterval(verificarStatus, 5000)
 }
 
@@ -159,7 +160,11 @@ setInterval(buscarUsuarios, 10000)
 
 /*bonus*/
 const newMsg = document.querySelector('.enviar > div input');
-
+newMsg.addEventListener('keydown', (event) => {
+    if(event.key === 'Enter'){
+        enviarNewMsg()
+    }
+})
 
 function enviarNewMsg() {
     user.text = newMsg.value
