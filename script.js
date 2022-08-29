@@ -15,7 +15,8 @@ function nomeUser() {
         userAtivo = {
             name: user.from
         }
-    
+
+        carregando()
         const volta = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', userAtivo);
         volta.then(novoUser);
         volta.catch(userExite);
@@ -29,11 +30,13 @@ function nomeUser() {
 
 function novoUser() {
 
-    carregando()
+    
     buscarMsg();
     buscarUsuarios()
 
     setTimeout( removerTela , 2000 )
+    setInterval(buscarUsuarios, 20000)
+    setInterval(buscarMsg, 3000)
     
 }
 
@@ -50,7 +53,7 @@ function removerTela(){
 
 function userExite(erro) {
     alert('Erro ' + erro.request.status + " Usuario já exite")
-
+    window.location.reload()
 }
 
 
@@ -119,7 +122,7 @@ function montandoMsg(msg) {
     ultimoElemento.scrollIntoView();
 }
 
-setInterval(buscarMsg, 3000)
+
 
 
 /* Buscar Usuarios*/
@@ -152,7 +155,7 @@ function carregarUser(usuariosAtivos) {
     visibilidade()
 }
 
-setInterval(buscarUsuarios, 10000)
+
 
 /**/
 
